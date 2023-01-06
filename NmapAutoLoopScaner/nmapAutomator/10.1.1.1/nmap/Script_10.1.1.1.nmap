@@ -1,0 +1,105 @@
+# Nmap 7.92 scan initiated Fri Jan  6 02:45:13 2023 as: /usr/bin/nmap -sCV -p443 --open -oN nmap/Script_10.1.1.1.nmap --system-dns --stats-every 2s 10.1.1.1
+Nmap scan report for 10.1.1.1
+Host is up (0.0031s latency).
+
+PORT    STATE SERVICE   VERSION
+443/tcp open  ssl/https
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Date: Fri, 06 Jan 2023 00:45:10 GMT
+|     Connection: Close
+|     Cache-Control: no-store,no-cache,must-revalidate
+|     Pragma: no-cache
+|     Expires: -1
+|     Last-Modified: Mon, 12 Jan 2000 13:42:42 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Type: text/html
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>
+|     <BODY><H1>Not Found</H1></BODY></HTML>
+|   GetRequest: 
+|     HTTP/1.0 302 Moved Temporarily
+|     Date: Fri, 06 Jan 2023 00:45:10 GMT
+|     Connection: Close
+|     Location: /auth/
+|     Cache-Control: no-store,no-cache,must-revalidate
+|     Pragma: no-cache
+|     Expires: -1
+|     Last-Modified: Mon, 12 Jan 2000 13:42:42 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Type: text/html
+|     <html><head><title>Redirection</title><meta http-equiv="refresh" content="0; url=/auth/"><script type="text/javascript">function redirect(){window.location.href = '/auth/';return true;}</script></head><body onload="redirect();"><a href="/auth/">Click here, if you are not redirected</a></body></html>
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Date: Fri, 06 Jan 2023 00:45:10 GMT
+|     Connection: Close
+|     Cache-Control: no-store,no-cache,must-revalidate
+|     Pragma: no-cache
+|     Expires: -1
+|     Last-Modified: Mon, 12 Jan 2000 13:42:42 GMT
+|     X-Content-Type-Options: nosniff
+|     Content-Type: text/html
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <HTML><HEAD><TITLE>405 Method Not Allowed</TITLE></HEAD>
+|     <BODY><H1>Method Not Allowed</H1></BODY></HTML>
+|   RTSPRequest: 
+|     HTTP/1.0 505 HTTP Version Not Supported
+|     Connection: Close
+|     Content-Type: text/html
+|     X-Content-Type-Options: nosniff
+|     Content-Length: 175
+|     Last-Modified: Mon, 12 Jan 2000 13:42:42 GMT
+|     Expires: -1
+|     Pragma: no-cache
+|     Cache-Control: no-store,no-cache,must-revalidate
+|     <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+|     <HTML><HEAD><TITLE>505 HTTP Version Not Supported</TITLE></HEAD>
+|_    <BODY><H1>HTTP Version Not Supported</H1></BODY></HTML>
+| ssl-cert: Subject: commonName=openvpnserver.com/organizationName=Stormshield/stateOrProvinceName=Default state/countryName=US
+| Not valid before: 2016-10-15T11:34:37
+|_Not valid after:  2026-10-13T11:34:37
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-title: AUTHENTICATION
+|_Requested resource was /auth/
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=1/6%Time=63B77D37%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,251,"HTTP/1\.0\x20302\x20Moved\x20Temporarily\r\nDate:\x20
+SF:Fri,\x2006\x20Jan\x202023\x2000:45:10\x20GMT\r\nConnection:\x20Close\r\
+SF:nLocation:\x20/auth/\r\nCache-Control:\x20no-store,no-cache,must-revali
+SF:date\r\nPragma:\x20no-cache\r\nExpires:\x20-1\r\nLast-Modified:\x20Mon,
+SF:\x2012\x20Jan\x202000\x2013:42:42\x20GMT\r\nX-Content-Type-Options:\x20
+SF:nosniff\r\nContent-Type:\x20text/html\r\n\r\n<html><head><title>Redirec
+SF:tion</title><meta\x20http-equiv=\"refresh\"\x20content=\"0;\x20url=/aut
+SF:h/\"><script\x20type=\"text/javascript\">function\x20redirect\(\){windo
+SF:w\.location\.href\x20=\x20'/auth/';return\x20true;}</script></head><bod
+SF:y\x20onload=\"redirect\(\);\"><a\x20href=\"/auth/\">Click\x20here,\x20i
+SF:f\x20you\x20are\x20not\x20redirected</a></body></html>")%r(HTTPOptions,
+SF:1B1,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nDate:\x20Fri,\x200
+SF:6\x20Jan\x202023\x2000:45:10\x20GMT\r\nConnection:\x20Close\r\nCache-Co
+SF:ntrol:\x20no-store,no-cache,must-revalidate\r\nPragma:\x20no-cache\r\nE
+SF:xpires:\x20-1\r\nLast-Modified:\x20Mon,\x2012\x20Jan\x202000\x2013:42:4
+SF:2\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Type:\x20text
+SF:/html\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202
+SF:\.0//EN\">\r\n<HTML><HEAD><TITLE>405\x20Method\x20Not\x20Allowed</TITLE
+SF:></HEAD>\r\n<BODY><H1>Method\x20Not\x20Allowed</H1></BODY></HTML>")%r(F
+SF:ourOhFourRequest,196,"HTTP/1\.0\x20404\x20Not\x20Found\r\nDate:\x20Fri,
+SF:\x2006\x20Jan\x202023\x2000:45:10\x20GMT\r\nConnection:\x20Close\r\nCac
+SF:he-Control:\x20no-store,no-cache,must-revalidate\r\nPragma:\x20no-cache
+SF:\r\nExpires:\x20-1\r\nLast-Modified:\x20Mon,\x2012\x20Jan\x202000\x2013
+SF::42:42\x20GMT\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Type:\x2
+SF:0text/html\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML
+SF:\x202\.0//EN\">\r\n<HTML><HEAD><TITLE>404\x20Not\x20Found</TITLE></HEAD
+SF:>\r\n<BODY><H1>Not\x20Found</H1></BODY></HTML>")%r(RTSPRequest,1BB,"HTT
+SF:P/1\.0\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nConnection:\x20
+SF:Close\r\nContent-Type:\x20text/html\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nContent-Length:\x20175\r\nLast-Modified:\x20Mon,\x2012\x20Jan\x20
+SF:2000\x2013:42:42\x20GMT\r\nExpires:\x20-1\r\nPragma:\x20no-cache\r\nCac
+SF:he-Control:\x20no-store,no-cache,must-revalidate\r\n\r\n<!DOCTYPE\x20HT
+SF:ML\x20PUBLIC\x20\"-//IETF//DTD\x20HTML\x202\.0//EN\">\r\n<HTML><HEAD><T
+SF:ITLE>505\x20HTTP\x20Version\x20Not\x20Supported</TITLE></HEAD>\r\n<BODY
+SF:><H1>HTTP\x20Version\x20Not\x20Supported</H1></BODY></HTML>\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  6 02:47:13 2023 -- 1 IP address (1 host up) scanned in 119.99 seconds

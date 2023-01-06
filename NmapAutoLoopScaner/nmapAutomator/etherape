@@ -1,0 +1,44 @@
+Install etherape Using apt
+
+Update apt database with apt using the following command.
+
+sudo apt update
+
+After updating apt database, We can install etherape using apt by running the following command:
+
+sudo apt -y install etherape
+
+Install etherape Using aptitude
+
+If you want to follow this method, you might need to install aptitude first since aptitude is usually not installed by default on Kali Linux. Update apt database with aptitude using the following command.
+
+sudo aptitude update
+
+After updating apt database, We can install etherape using aptitude by running the following command:
+
+sudo aptitude -y install etherape
+
+How To Uninstall etherape on Kali Linux
+
+To uninstall only the etherape package we can use the following command:
+
+sudo apt-get remove etherape
+
+Uninstall etherape And Its Dependencies
+
+To uninstall etherape and its dependencies that are no longer needed by Kali Linux, we can use the command below:
+
+sudo apt-get -y autoremove etherape
+
+Remove etherape Configurations and Data
+
+To remove etherape configuration and data from Kali Linux we can use the following command:
+
+sudo apt-get -y purge etherape
+
+Remove etherape configuration, data, and all of its dependencies
+
+We can use the following command to remove etherape configurations, data and all of its dependencies, we can use the following command:
+
+sudo apt-get -y autoremove --purge etherape
+
